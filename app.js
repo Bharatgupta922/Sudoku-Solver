@@ -12,20 +12,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 
-app.get("/" , function (req , res) {
+app.get("/", function (req, res) {
+
+    res.render("home");
+
+});
 
 
+app.get("/3into3", function (req, res) {
+    res.render("3into3");
+});
 
+app.get("/9into9", function (req, res) {
+    res.render("9into9");
+});
+
+app.get("/12into12", function (req, res) {
+    res.render("12into12");
 });
 
 
 
 
 
-
-
-
-
-app.listen(3000 , function (req , res ) {
+app.listen(3000, function (req, res) {
     console.log("Server has started at port number : 3000");
-})
+});
