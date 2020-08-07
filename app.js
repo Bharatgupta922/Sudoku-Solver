@@ -20,15 +20,21 @@ app.get("/", function (req, res) {
 
 
 app.get("/3into3", function (req, res) {
-    res.render("3into3");
+    res.render("NXN", {
+        n: 3
+    });
 });
 
 app.get("/9into9", function (req, res) {
-    res.render("9into9");
+    res.render("NXN", {
+        n: 9
+    });
 });
 
 app.get("/12into12", function (req, res) {
-    res.render("12into12");
+    res.render("NXN", {
+        n: 12
+    });
 });
 
 

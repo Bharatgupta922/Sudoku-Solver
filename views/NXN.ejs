@@ -1,12 +1,15 @@
 <%- include('partials/header')%>
 
-<% for(var i = 1 ; i <=  n  ; ++i){ %>
-<%   for(var j = 1 ; j <= n ; ++j){ %>
-<input type="text" maxlength="1" max="3" style="width: 5%; padding: 1%; ">
-<% } %>
-<br>
-<% } %>
+
+<div style="margin: 0 auto 0 auto; padding: 10%;">
+    <% for(var i = 1 ; i <=  n  ; ++i){ %>
+        <%   for(var j = 1 ; j <= n ; ++j){ %>
+        <input type="text" maxlength="1" max="3" style="width: 40px; height: 40px; ">
+        <% } %>
+        <br>
+        <% } %>
+</div>
+
 
 
 <%- include('partials/footer')%>
-    
