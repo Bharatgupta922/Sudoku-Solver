@@ -13,5 +13,14 @@
     "ejs": "^3.1.3",
     "express": "^4.17.1",
     "nodemon": "^2.0.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bharatgupta922/Sudoku-Solver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bharatgupta922/Sudoku-Solver/issues"
+  },
+  "homepage": "https://github.com/Bharatgupta922/Sudoku-Solver#readme"
 }
