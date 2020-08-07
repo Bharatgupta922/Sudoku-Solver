@@ -66,3 +66,24 @@ body{
   padding: 5%;
   color: white;
 }
+.fixed-bottom{
+	padding-top: 4px;
+	position: static;
+	width: 100%;
+}
+.open-button {
+  background-color: transparent;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 18px;
+  border-radius: 60px;
+}
+.chat-btn{
+	font-size: 44px;
+	color: red;
+}
