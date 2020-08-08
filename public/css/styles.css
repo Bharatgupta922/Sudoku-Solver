@@ -48,9 +48,10 @@ body{
 }
 
 .footer {
-	position: absolute;
+	position: fixed;
 	text-align: center;
 	bottom: 0;
+  right: 0;
 	width: 100%;
 	height: 60px;
 	background-color: #323232;
@@ -72,6 +73,26 @@ body{
 	position: static;
 	width: 100%;
   font-size: 20px;
+   bottom:0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: currentColor;
+/*  box-shadow: inset 0 0 5px white; */
+  border-radius: 15px;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border: 1px solid grey; 
+  border-radius: 15px;
 }
 /*.open-button {
   background-color: transparent;
@@ -249,6 +270,7 @@ body{
     margin-top:0px;
   }
   .chat_container .chat_entry input[type="text"],textarea {
+    color: black;
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
@@ -269,6 +291,7 @@ body{
     -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
     outline:0 none;
     border-color:#66afe9;
+    color: black;
   }
   .chat_container .chat_entry input[type="submit"]{
     padding: 5px 12px;
@@ -292,9 +315,6 @@ body{
     background-color: #284b63 !important;
     font-family:Arial, Helvetica, sans-serif; 
     margin-left: 35px;   
-  }
-  .chat_container .chat_entry input[type="submit"]:hover {
-    background-color: #C64545;
   }
   .form-error {
     display:none;
