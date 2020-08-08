@@ -3,7 +3,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -18,7 +17,17 @@ app.get("/", function (req, res) {
 
 });
 
+app.post("/result", function (req, res) {
 
+    var board = new Array(3);
+    for (var i = 0; i < 3; ++i) {
+        board[i] = [];
+    }
+    
+    for (var x = "0"; x < "9"; ++x)
+        console.log(req.body[x] + "\n");
+
+});
 app.get("/3into3", function (req, res) {
     res.render("NXN", {
         n: 3
