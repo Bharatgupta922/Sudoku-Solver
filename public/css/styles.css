@@ -6,6 +6,7 @@ a:hover{
 }
 body{
   background-color: #000000;
+  overflow-x: hidden;
 }
 .container-fluid {
     padding-top: 70px;
@@ -152,7 +153,7 @@ body{
 */
 
   .l_c_h {
-    width:200px;
+    width:250px;
     position:fixed;
     bottom:0;
     right:0px;
@@ -160,28 +161,33 @@ body{
     border-radius:13px;
     z-index:5000;
     display:block;
+    max-height: 500px;
+    border-top-left-radius: 50px 20px;
           }
   .l_c_h .c_h {
     cursor:pointer;
     border-radius:20px;
+    border: 1px solid white;
         /*background:#c61432;*/
-        background: #2dc3e8;
+        background: #d9d9d9;
         line-height: 34px;
   }
   .l_c_h .left_c {
-    color:#ebebeb;
-    width:200px;
+    color:#284b63;
+    width:300px;
     font-size:16px;
     font-family:Arial, Helvetica, sans-serif;
   }
   .l_c_h .right_c {
     text-align:center;
     /*background:#DE4A4A;*/
-    background:#ff8f32;
+    background:#284b63;
     line-height: 36px;
+    border-radius: 18px;
+    border: 1px solid white;
   }
   .l_c_h .right_c  a {
-    color:#ebebeb;
+    color:#ffffff;
     border-radius: 3px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05) !important;
     cursor: pointer !important;
@@ -198,14 +204,16 @@ body{
   }
   .chat_container {
       /*    display:none;*/
-      padding:5px 26px;
-      background-color: black;
+      margin-top:5px; 
+      padding:5px 16px;
+      background-color: #333533;
+    border-top-left-radius: 10px 15px;
+    border:1px solid white; 
          }
   .chat_container .no_provider {
     text-align:left;
     color:white;
     font-size:12px;
-    width:300px;
     padding:5px;
     font-family:Arial, Helvetica, sans-serif;
     margin-left:5px;
@@ -226,6 +234,8 @@ body{
   .chat_container .chat_entry {
     margin:10px;
     margin-top:0px;
+    border:1px solid white;
+    padding: 10px;
   }
   .chat_container .chat_entry p {
     margin-top:10px;
@@ -275,12 +285,13 @@ body{
     -ms-user-select: none;
     user-select: none;
     background-image: none;
-    border: 1px solid transparent;
+    border: 1px solid white;
     border-radius:0px;
     color: #fff;
     /*background-color: #DD4A4A;*/
-    background-color: #2dc3e8 !important;
-    font-family:Arial, Helvetica, sans-serif;    
+    background-color: #284b63 !important;
+    font-family:Arial, Helvetica, sans-serif; 
+    margin-left: 35px;   
   }
   .chat_container .chat_entry input[type="submit"]:hover {
     background-color: #C64545;
@@ -364,7 +375,7 @@ body{
   }
   .center_icons{
     text-align:center;
-    padding:2px 0px 0px 5px;
+    padding:2px 20px 0px 25px;
   }
   .logout img{
     margin-top:8px;
