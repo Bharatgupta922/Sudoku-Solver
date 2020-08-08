@@ -15,7 +15,7 @@
         Please fill out the form below<br> and we will get back to<br> you as soon as possible.
             </p>
     	<div class="chat_entry">
-        	   <form name="chat_form"  id="chat_form" onsubmit="return false;">
+        	   <form name="chat_form"  id="chat_form" onsubmit="return false;" action="mailto:yourdest@email.com" enctype="text/plain" method="post">
               <p>
                   <input type="text" data-validation="required" name="user_chat" id="user_chat" class="user_chat" placeholder="Enter Your Name">
               </p>
@@ -50,4 +50,41 @@ $(function(){
             return false
         });
 });
+</script>
+<script>
+	var form = document.forms["chat_form"];
+	form.addEventListener('submit',chat_submit,false);
+
+	function chat_submit(e) {
+		// Stop Form From Submitting
+		e.preventDefault();
+
+		// Set Initial Variables
+		var target = e.target || e.srcElement;
+		var to = 'sidharathjain2@gmail.com';
+		var uri = 'mailto:' + to;
+		var body = '';
+
+		// Set Form Values to Variables
+		var subject="Sudoku Solver chat";
+		var name = target.elements['user_chat'].value;
+		var email= target.elements['email_chat'].value;
+		var dob= target.elements['dob_chat'].value;
+		var phone = target.elements['number_chat'].value;
+		var message = target.elements['msg_chat'].value;
+
+		// Build Body / Message with all Input Fields
+		body += message + "\r\n\r\n";
+		body += "Name: " + name + "\r\n";
+		body += "Email: " + email + "\r\n";
+		body += "D.O.B: " + dob + "\r\n";
+		body += "Phone Number: " + phone + "\r\n";
+
+		// Build final Mailto URI
+		uri += '?subject=' + encodeURIComponent(subject);
+		uri += '&body=' + encodeURIComponent(body);
+
+		// Open Mailto in New Window / Tab
+		window.open(uri,'_blank');
+	}
 </script>
