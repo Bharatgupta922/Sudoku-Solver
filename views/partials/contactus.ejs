@@ -1,1 +1,53 @@
-<button class="open-button" onclick="openForm()"><i class='fas fa-headset chat-btn'></i><span style="color:red;"><br>Contact Us</span></button>
+<div class="l_c_h" style="background-color:transparent;">
+	<div class="c_h">
+    	<div class="left_c">
+            <div class="left right_c left_icons">
+                   <a href="#" class="mini" style="font-size:23px;">+</a>
+            </div>
+            <div class="left center_icons">
+                 Live help!
+            </div>        	
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="chat_container" style="display: none;">
+    <p class="no_provider"> 
+        Please fill out the form below<br> and we will get back to<br> you as soon as possible.
+            </p>
+    	<div class="chat_entry">
+        	   <form name="chat_form"  id="chat_form" onsubmit="return false;">
+              <p>
+                  <input type="text" data-validation="required" name="user_chat" id="user_chat" class="user_chat" placeholder="Enter Your Name">
+              </p>
+              <p>
+                  <input type="text" data-validation="email" name="email_chat" id="email_chat" class="email_chat" placeholder="Enter Your Email">
+              </p>
+              <p>
+                  <input type="text" data-validation="number" name="number_chat" id="number_chat" class="number_chat" placeholder="Enter Your Number">
+              </p>
+               <p>
+                  <input type="text" data-validation="date" name="dob_chat" id="dob_chat" class="dob_chat" placeholder="Enter Your Date of Birth">
+              </p>
+              <p>
+                  <textarea placeholder="Type message.." name="msg_chat id="msg_chat" required></textarea>
+              </p>
+              <p style="text-align:left;">
+                  <input type="submit" name="chat_submit" class="chat_submit" id="chat_submit" value="Start Chat">
+              </p>
+            </form>
+      </div>
+    </div>
+</div>
+<script>
+$(function(){
+   $(".c_h").click(function(e) {
+            if ($(".chat_container").is(":visible")) {
+                $(".c_h .right_c .mini").text("+")
+            } else {
+                $(".c_h .right_c .mini").text("-")
+            }
+            $(".chat_container").slideToggle("slow");
+            return false
+        });
+});
+</script>
