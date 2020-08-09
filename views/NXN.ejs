@@ -1,19 +1,21 @@
 <%- include('partials/header')%>
 <% var x = 0 ; %>
 <form action="/result" method="POST">
-
     <div style="margin: 0 auto 0 auto; padding: 10%;">
-
+        <input type="number" max="12" name="order" value="<%=n%>" readonly>
+        <br>
         <% for(var i = 1 ; i <=  n  ; ++i){ %>
         <%   for(var j = 1 ; j <= n ; ++j){ %>
 
-        <input type="number" maxlength="1" style="width: 40px; height: 40px;" name="<%= x %>">
+        <input type="number" maxlength="1" style="width: 40px; height: 40px;" value="0" name="<%= x %>">
         <% x = x + 1 ;%>
         <% } %>
         <br>
         <% } %>
     </div>
     <button type="submit" name="button">Solve</button>
+
+
 </form>
 
 
