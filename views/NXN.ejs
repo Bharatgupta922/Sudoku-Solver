@@ -2,8 +2,9 @@
 <% var x = 0 ; %>
 <form action="/result" method="POST">
     <div style="margin: 0 auto 0 auto; padding: 10%;">
-        <input type="number" max="12" name="order" value="<%=n%>" readonly>
-        <br>
+        <h1 class="head" style="display: inline;">ORDER:.</h1>
+        <input type="number" max="12" name="order" style="width: 2%;" value="<%=n%>" readonly>
+        <br><br>
         <% for(var i = 1 ; i <=  n  ; ++i){ %>
         <%   for(var j = 1 ; j <= n ; ++j){ %>
 
