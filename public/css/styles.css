@@ -12,7 +12,19 @@ body{
     padding-top: 70px;
     padding-bottom: 70px;
 }
-
+#sp-button{
+  background:    #000000;
+  border-radius: 5px;
+  padding:       15px 15px;
+  color:         #ffffff;
+  display:       inline;
+  font:          normal  20px/1 "komika", serif;
+  text-align:    center;
+}
+#sp-button:hover{
+  text-decoration: none;
+  border: solid #323232;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
