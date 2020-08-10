@@ -16,6 +16,9 @@ app.get("/", function (req, res) {
     res.render("home");
 
 });
+function addBorder(x) {
+    x.style.border = "thick solid blue";
+}
 function printTheBoard(board, order) {
     var str = "";
     for (var i = 0; i < order; ++i) {
@@ -101,14 +104,24 @@ app.post("/result", function (req, res) {
             board[i][j] = Number(req.body[x++]);
         }
     }
-    if (solve(board, Number(order)) === true) {
+    var valid = true;
+    for (var i = 0; i < Number(order); ++i) {
+        for (var j = 0; j < Number(order); ++j) {
+            if (board[i][j] > Number(order)) {
+                valid = false;
+                break;
+            }
+        }
+    }
+
+    if (valid && solve(board, Number(order)) === true) {
         printTheBoard(board, order);
-        res.render("/success", {
+        res.render("success", {
             arr: board
         });
     }
     else {
-        res.render("/fail");
+        res.render("fail");
     }
 });
 app.get("/3into3", function (req, res) {
