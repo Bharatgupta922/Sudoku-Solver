@@ -1,10 +1,13 @@
-<div class="jumbotron">
-    <h1 class="display-4">Sorry</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.</p>
+<%- include('partials/header')%>
+<div class="jumbotron jumbotron-fluid container-fluid" style="margin: 2%;">
+    <h1 class="display-4">SORRY ☹</h1>
+    <p class="lead">this input cannot be solve ! Wrong Input </p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <p> You have to make changes in the sudoku or you can design a new one </p>
+    <br>    
+    <a id="sp-button" href="/" role="button">Solve Next</a>
+    <a id="sp-button" onclick="window.history.back()" role="button">Make Corrections</a>
+
 </div>
+<%- include('partials/contactus')%>
+<%- include('partials/footer')%>
