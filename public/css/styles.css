@@ -91,6 +91,16 @@ input::-webkit-inner-spin-button {
 	font-size: 12px;
   color: #fff;
 }
+.link-to-contact{
+color: #ffffff;
+}
+
+.link-to-contact:hover{
+  color : #1abc9c;
+  text-decoration: underline;
+
+}
+
 .head{
   font-size: 400%;
   font-family: 'Indie Flower', cursive;
