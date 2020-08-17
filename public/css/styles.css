@@ -25,6 +25,18 @@ body{
   text-decoration: none;
   border: solid #323232;
 }
+.solve-button{
+  background:    #323232;
+border-radius: 15px;
+padding:       12px 34px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal bold 23px/1 "Open Sans", sans-serif;
+text-align:    center;
+}
+.solve-button:hover{
+  border: solid #000000;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

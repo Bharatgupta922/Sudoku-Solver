@@ -9,13 +9,14 @@
         <% for(var i = 1 ; i <=  n  ; ++i){ %>
         <%   for(var j = 1 ; j <= n ; ++j){ %>
 
-        <input type="number" maxlength="1" style="width: 40px; height: 40px;text-align:center;" value="0" name="<%= x %>" onClick="this.value=''">
+        <input type="number" maxlength="1" style="width: 40px; height: 40px;text-align:center;" value="0"
+            name="<%= x %>" onClick="this.value=''">
         <% x = x + 1 ;%>
         <% } %>
         <br>
         <% } %>
     </div>
-    <button type="submit" name="button" style="margin-left:12%;width:10%;">Solve</button>
+    <button type="submit" name="button" class="solve-button">Solve</button>
 
 
 </form>
